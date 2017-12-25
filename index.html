@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login Project</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        function validateForm() {
+            var x = document.forms["loginForm"]["email"].value;
+            var y = document.forms["loginForm"]["password"].value;
+            if (x == "" || y == "") {
+                alert("All feilds must be filled out");
+                return false;
+            }
+            if ( x==="bharat@gmail.com" && y==="bharatjain")
+                return true;
+            else
+                alert("Email or password is incorrect");
+                return false;    
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="./images/google_logo.png">
+                <h1><span class="highlight">Bharat</span> Tech Solutions</h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <section id="login_form">
+                <div class="dark">
+                    <h2>Login</h2>
+                    <form class="login" name="loginForm" action="./welcome.html" onsubmit="return validateForm()" method="post"> 
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" placeholder="Email Address" name="email">
+                        </div>
+                        <div>
+                            <label>Password</label><br>
+                            <input type="password" placeholder="Password" name="password">
+                        </div>
+                        <button class="button_1" type="submit">Login</button>       
+                    </form>
+
+                    <h4>New User ? <a href="register.html">Register here</a></h4>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy; 2017, A Bharat Jain Creation</p>
+    </footer>
+</body>
+</html>

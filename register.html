@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login Project</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        function RegisterForm(){
+            var w = document.forms["RegisterForm"]["username"].value;
+            var x = document.forms["RegisterForm"]["email"].value;
+            var y = document.forms["RegisterForm"]["password"].value;
+            var z = document.forms["RegisterForm"]["confirmPassword"].value;
+            if (w == "" || x == "" || y == "" || z =="") {
+                alert("All feilds must be filled out");
+                return false;
+            }
+            else{
+                alert("Welcome " + w);
+                return true;
+            }
+        }
+    </script>   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <img src="./images/google_logo.png">
+                <h1><span class="highlight">Bharat</span> Tech Solutions</h1>
+            </div>
+        </div>
+    </header> 
+
+    <section id="showcase">
+        <div class="container">
+            <section id="registration_form">
+                <div class="dark">
+                    <h2>Register</h2>
+                    <form class="register" name="RegisterForm" action="./welcome.html" onsubmit="return RegisterForm()" method="post">
+                        <div>
+                            <label>Name</label><br>
+                            <input type="text" placeholder="Name" name="username">
+                        </div>
+                        <div>
+                            <label>Email</label><br>
+                            <input type="email" placeholder="Email Address" name="email">
+                        </div>
+                        <div>
+                            <label>Password</label><br>
+                            <input type="password" placeholder="Password" name="password">
+                        </div>
+                        <div>
+                            <label>Confirm Password</label><br>
+                            <input type="password" placeholder="Confirm Password" name="confirmPassword">
+                        </div>
+                        <button class="button_1" type="submit">Register</button>       
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Copyright &copy; 2017, A Bharat Jain Creation</p>
+    </footer>
+</body>
+</html>
